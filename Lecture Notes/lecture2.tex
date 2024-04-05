@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,enumitem}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Rd}{\mathbb{R}^{d}}
+\newcommand{\exr}{[-\infty, \infty]}
+
+\newenvironment{ex}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{sol}[1][Solution]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1:}]}{\end{trivlist}}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    
+\newenvironment{definition}[2][Definition]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    
+\newenvironment{example}[1][Example]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1:}]}{\end{trivlist}}
+\begin{document}
+\noindent David O.H. Cutler \hfill {\Large Math 146: Lecture 1} \hfill \today
+
+\begin{lemma}[(The Units of a Ring form a Group)]
+    Let $R$ be a ring, and let $R^{\times}$ be the set of units in $R$. Then $R^{\times}$ is a group under the inherited multiplication.
+    \begin{proof}
+        Note that $1_R \in R^{\times}$, and it fulfills the property of the identity. Also, the ring guarentees our multiplicaton is associative, so nothing to prove there. \\ \\
+        If $u$ is a unit then, just note so is $u^{-1}$. We just check then the product of units is a unit, but this is clear as $(u_1u_2)^{-1} = u_2^{-1}u_1^{-1}$. 
+    \end{proof}
+\end{lemma}
+
+\begin{definition}
+    A ring $R$ is called a field if:
+    \begin{enumerate}
+        \item $R$ is commutative.
+        \item $R^{\times} = \{a \in R, a \neq 0\}$.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    If $R$ is a ring, a \textit{zero-divisor} in $R$ is an element $a \in R$ such that there exists $b \in R, b \neq 0$ where either $ab = 0$ or $ba = 0$.
+\end{definition}
+
+\begin{example}
+    In $\Z_m$ the zero divisors are those elements with indices that are \textbf{not} relatively prime to $m$.
+\end{example}
+
+\begin{lemma}
+    If $R$ is a ring and $u \in R^\times$, then it is not a zero divisor. 
+    \begin{proof}
+        Note for $ub = 0$, for $b \neq 0$, multiplication by the inverse has $b = (u)^{-1}0 = 0$, a contradiction. A symmetric case follows for the other part of the definition.
+    \end{proof}
+\end{lemma}
+
+\begin{definition}
+    A commutative ring $R$ is an integral domain is the only zero-divisor is $0$. 
+    \\ \\ Recall integral domains have cancellation. 
+\end{definition}
+
+\begin{definition}
+    Let $R$ be a ring. A \textit{formal polynomial} over $\R$ is an expression of the form $\sum_{n = 0}^\infty a_nx^n$ such that each $a_n$ is in $R$, such that only finitely many $a_n$ are nonzero. The largest n for which $a_n \neq 0$ is called the degree of $F$. 
+\end{definition}
+
+\begin{definition}
+    We define addition of polynomials coefficient-wise. Multiplication is defined in the binomial context.
+\end{definition}
+
+
+\end{document}

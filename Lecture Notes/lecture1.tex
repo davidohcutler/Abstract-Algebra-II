@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,enumitem}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Rd}{\mathbb{R}^{d}}
+\newcommand{\exr}{[-\infty, \infty]}
+
+\newenvironment{ex}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{sol}[1][Solution]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1:}]}{\end{trivlist}}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    
+\newenvironment{definition}[2][Definition]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+    
+\newenvironment{example}[1][Example]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1:}]}{\end{trivlist}}
+
+
+\begin{document}
+\noindent David O.H. Cutler \hfill {\Large Math 146: Lecture 1} \hfill \today
+
+\begin{example}
+    Why is $S_3$ "built from abelian groups"? \\ \\
+    Recall: the order of $S_3$ is $6$. $S_3$ has a normal subgroup $C_3 \subseteq S_3$, where $|C_3| = 3$. \\ \\
+    Because it is normal, we can construct the quotient group $S_3 / C_3$ which has order $2$. This is one group up to isomorphism of order 2, so it is abelian given we must have $S_3 / C_3 \cong C_2$. \\ \\
+    So $S_3$ has a normal, abelian subgroup that has the property that the quotient of $S_3$ with it is also abelian; we appeal to this for intuition as to what "built from abelians means". \\ \\
+    Continuing this example on $S_4$, we note that $A_4$ does not work, as it isn't abelian. Considering over the Klein group however, we get interestingly that $S_4 / V_4 \cong S_3$. \\ \\
+    So we extend our definition that $S_4$ is "built from abelians" in the sense that it has an abelian normal subgroup which determines a quotient that itself is "built from abelians".
+\end{example}
+
+\begin{definition}{(Solvable)}
+    A group which is "built from abelians" is also called \textbf{solvable}.
+\end{definition}
+
+\begin{example}
+    This is why the quintic formula fails. For $n \geq 5$, the only normal subgroups of $S_n$ are the trivial subgroup and $A_n$, but $A_n$ for $n \geq 5$ is simple and thus has no meaningful quotient.
+\end{example}
+
+\begin{definition}{(Ring)}
+    A \textbf{ring} is an abelian group $R$ (with operation $+$) with an additional operation (denoted $\cdot$) such that:
+    \begin{enumerate}[label=(\alph*)]
+        \item Multiplication is associative.
+        \item Multiplication distributes over addition both ways.
+        \item There is a multiplicative identity. 
+    \end{enumerate}
+\end{definition}
+
+\begin{lemma}
+    e = ee' = e' 
+
+    0 multiply by anything
+\end{lemma}
+
+
+
+
+
+\end{document}
